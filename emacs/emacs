@@ -1,0 +1,12 @@
+(add-to-list 'load-path "~/cscope-15.8b/contrib/xcscope/") ;;
+(global-hl-line-mode 1) ;; 当前行高亮
+(setq-default indent-tabs-mode nil) ;; 配置tab为空格
+(setq indent-tabs-mode nil)
+(setq tab-width 8)
+(setq default-tab-width 8)
+(setq c-basic-offset 8)
+(display-time) ;; 显示时间
+(global-linum-mode t)
+(add-hook 'c-mode-common-hook
+            '(lambda ()
+                   (require 'xcscope))) ;; 打开c或者c++文件时才加载xcsope

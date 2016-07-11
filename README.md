@@ -1,1 +1,6 @@
-# editor_profile
+# This is a editor configuration
+
+
+example such as:
+emacs
+tmux
