@@ -1,4 +1,5 @@
 (add-to-list 'load-path "~/cscope-15.8b/contrib/xcscope/") ;;
+(add-to-list 'load-path "~/markdown/markdown-mode/") ;;
 (global-hl-line-mode 1) ;; 当前行高亮
 (setq-default indent-tabs-mode nil) ;; 配置tab为空格
 (setq indent-tabs-mode nil)
@@ -10,3 +11,8 @@
 (add-hook 'c-mode-common-hook
             '(lambda ()
                    (require 'xcscope))) ;; 打开c或者c++文件时才加载xcsope
+(autoload 'markdown-mode "markdown-mode"
+  "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
